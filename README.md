@@ -100,7 +100,7 @@ AppRegistry.registerComponent('snapslider', () => snapslider);
 Prop                  | Type     | Optional | Default                   | Description
 --------------------- | -------- | -------- | ------------------------- | -----------
 containerStyle        | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | The style for the slider container
-style                 | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the slider, append to the SliderIOS(https://facebook.github.io/react-native/docs/sliderios.html) style 
+style                 | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the slider, append to the [SliderIOS](https://facebook.github.io/react-native/docs/sliderios.html)  style 
 itemWrapperStyle      | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the items label container
 itemStyle            | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the individual item
 items    | Array    | No      |                           | Item list, in JSON Array [{value: 0, label: 'Item A'}...{}]
