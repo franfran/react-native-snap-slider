@@ -79,17 +79,12 @@ var styles = StyleSheet.create({
     },
 
     snapsliderContainer: {
-        borderWidth: 0,
-        backgroundColor: 'transparent',
     },
     snapslider: {
-        borderWidth: 0,
     },
     snapsliderItemWrapper: {
-        borderWidth: 0,
     },
     snapsliderItem: {
-        borderWidth: 0,
     }
 });
 AppRegistry.registerComponent('snapslider', () => snapslider);
