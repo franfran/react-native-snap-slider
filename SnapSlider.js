@@ -84,7 +84,9 @@ var SnapSlider = React.createClass({
     */
     _getItemWidth: function (x) {
         var width = x.nativeEvent.layout.width;
-        this.setState({itemWidth: this.state.itemWidth.push(width)});
+        var itemWidth = this.state.itemWidth;
+        itemWidth.push(width);
+        this.setState({itemWidth: itemWidth});
 
         //we have all itemWidth determined, let's update the silder width
         if (this.state.itemWidth.length == this.props.items.length) {
