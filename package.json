@@ -1,0 +1,23 @@
+{
+  "name": "react-native-snap-slider",
+  "version": "0.1.0",
+  "description": "Provide snap control for SliderIOS",
+  "main": "SnapSlider.js",
+  "author": "Francis Mak <francis@franfran.com> (https://github.com/franfran)",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "SliderIOS",
+    "slider",
+    "snap"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/franfran/react-native-snap-slider.git"
+  }
+}
