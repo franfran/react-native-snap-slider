@@ -1,10 +1,18 @@
 # react-native-snap-slider
-Provide snap control for SliderIOS
+Provide snap control for Slider
 
 [![npm version](http://img.shields.io/npm/v/react-native-snap-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
 [![npm downloads](http://img.shields.io/npm/dm/react-native-snap-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
 [![npm licence](http://img.shields.io/npm/l/react-native-snap-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
 [![Platform](https://img.shields.io/badge/platform-ios-989898.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
+
+
+Originally, this project was created to add snap control for SliderIOS.
+
+The newly updated Slider component already provide similar function by the ["step" Props](https://facebook.github.io/react-native/docs/slider.html#content)
+
+This component can have different "step" values and labels.
+
 
 ![Demo](https://github.com/franfran/react-native-snap-slider/wiki/images/screenshot.gif)
 
@@ -95,7 +103,7 @@ AppRegistry.registerComponent('snapslider', () => snapslider);
 Prop                  | Type     | Optional | Default                   | Description
 --------------------- | -------- | -------- | ------------------------- | -----------
 containerStyle        | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | The style for the slider container
-style                 | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the slider, append to the [SliderIOS](https://facebook.github.io/react-native/docs/sliderios.html)  style 
+style                 | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the slider, append to the [SliderIOS](https://facebook.github.io/react-native/docs/sliderios.html)  style
 itemWrapperStyle      | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the items label container
 itemStyle            | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the individual item
 items    | Array    | No      |                           | Item list, in JSON Array [{value: 0, label: 'Item A'}...{}]
