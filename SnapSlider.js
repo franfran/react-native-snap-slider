@@ -87,35 +87,35 @@ var SnapSlider = React.createClass({
         var itemWidth = this.state.itemWidth;
         itemWidth.push(width);
         this.setState({itemWidth: itemWidth});
-
         //we have all itemWidth determined, let's update the silder width
         if (this.state.itemWidth.length == this.props.items.length) {
             var max = Math.max.apply(null, this.state.itemWidth);
-            if (this.refs.slider && this.state.sliderWidth == 0) {
+            if (this.refs.slider && this.state.sliderWidth > 0) {
                 var that = this;
-                this.refs.slider.measure(function (ox, oy, width, height, px, py) {
-                    var w, l;
-                    var buffer = 30;//add buffer for the slider 'ball' control
-                    if(buffer > w){
-                        buffer = 0;
-                    }
-                    w = width - max;
-                    w = w + buffer;
-                    l = max / 2;
-                    l = l - buffer / 2;
-                    that.setState({sliderWidth: w});
-                    that.setState({sliderLeft: l});
-                });
+                var w, l;
+                var buffer = 30;//add buffer for the slider 'ball' control
+                if(buffer > w){
+                    buffer = 0;
+                }
+                w = that.state.sliderWidth - max;
+                w = w + buffer;
+                l = max / 2;
+                l = l - buffer / 2;
+                that.setState({sliderWidth: w});
+                that.setState({sliderLeft: l});
             }
-
         }
+    },
+    _getSliderWidth: function (e) {
+        var {x, y, width, height} = e.nativeEvent.layout;
+        this.setState({sliderWidth: width});
     },
     render() {
         var that = this;
         var itemStyle = [defaultStyles.item, this.props.itemStyle];
         return (
-            <View style={[defaultStyles.container, this.props.containerStyle]}>
-                <SliderIOS ref="slider" {...this.props} style={this._sliderStyle()} onSlidingComplete={(value) => this._onSlidingCompleteCallback(value)} value={this.state.value} />
+            <View onLayout={that._getSliderWidth} style={[defaultStyles.container, this.props.containerStyle]}>
+                <Slider ref="slider" {...this.props} style={this._sliderStyle()} onSlidingComplete={(value) => this._onSlidingCompleteCallback(value)} value={this.state.value} />
                 <View style={[defaultStyles.itemWrapper, this.props.itemWrapperStyle]}>
                 {
                     this.props.items.map(function(i, j) {
