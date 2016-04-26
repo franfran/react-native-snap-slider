@@ -4,7 +4,7 @@ var React = require('react-native');
 var {
     PropTypes,
     StyleSheet,
-    SliderIOS,
+    Slider,
     Text,
     View,
     } = React;
