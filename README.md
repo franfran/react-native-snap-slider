@@ -4,7 +4,6 @@ Provide snap control for Slider
 [![npm version](http://img.shields.io/npm/v/react-native-snap-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
 [![npm downloads](http://img.shields.io/npm/dm/react-native-snap-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
 [![npm licence](http://img.shields.io/npm/l/react-native-snap-slider.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
-[![Platform](https://img.shields.io/badge/platform-ios-989898.svg?style=flat-square)](https://npmjs.org/package/react-native-snap-slider "View this project on npm")
 
 
 Originally, this project was created to add snap control for SliderIOS.
