@@ -15,7 +15,7 @@ var SnapSlider = React.createClass({
         style: View.propTypes.style,
         containerStyle: View.propTypes.style,
         itemWrapperStyle: View.propTypes.style,
-        itemStyle: View.propTypes.style,
+        itemStyle: Text.propTypes.style,
         items: PropTypes.array,
         defaultItem: PropTypes.number,
     },
