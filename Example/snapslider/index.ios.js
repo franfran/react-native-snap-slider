@@ -3,7 +3,8 @@
  */
 'use strict';
 
-var React = require('react-native');
+var React = require('react');
+var ReactNative = require('react-native');
 var SnapSlider = require('react-native-snap-slider');
 
 var {
@@ -11,7 +12,7 @@ var {
     StyleSheet,
     Text,
     View,
-} = React;
+} = ReactNative;
 
 var snapslider = React.createClass({
     sliderOptions: [
