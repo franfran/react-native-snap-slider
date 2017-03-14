@@ -1,13 +1,18 @@
 'use strict';
 
-var React = require('react-native');
+var React = require('react');
+var ReactNative = require('react-native');
+
 var {
-    PropTypes,
+    PropTypes
+    } = React;
+
+var {
     StyleSheet,
     Slider,
     Text,
     View,
-    } = React;
+    } = ReactNative;
 
 var SnapSlider = React.createClass({
     propTypes: {
