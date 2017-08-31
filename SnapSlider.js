@@ -70,10 +70,11 @@ var SnapSlider = React.createClass({
         } else {
             this.setState({adjustSign: 1});
         }
-        this.setState({value: value, item: i});
+        this.setState({value: value, item: i}, () => 
+            //callback
+            this.props.onSlidingComplete()
+        );
 
-        //callback
-        this.props.onSlidingComplete();
     },
     /*
     componentWillUpdate() {
