@@ -21,8 +21,9 @@ var SnapSlider = React.createClass({
         containerStyle: View.propTypes.style,
         itemWrapperStyle: View.propTypes.style,
         itemStyle: Text.propTypes.style,
-        items: PropTypes.array,
+        items: PropTypes.array.isRequired,
         defaultItem: PropTypes.number,
+        labelPosition: PropTypes.string
     },
     getInitialState() {
         var sliderRatio = this.props.maximumValue / (this.props.items.length - 1);
@@ -116,19 +117,22 @@ var SnapSlider = React.createClass({
         var {x, y, width, height} = e.nativeEvent.layout;
         this.setState({sliderWidth: width});
     },
+    _labelView() {
+        var itemStyle = [defaultStyles.item, this.props.itemStyle];
+        let labels = this.props.items.map((i, j) => <Text key={i.value} ref={"t"+j} style={itemStyle} onLayout={this._getItemWidth}>{i.label}</Text>);
+        return (
+            <View style={[defaultStyles.itemWrapper, this.props.itemWrapperStyle]}>
+            { labels }
+            </View>
+        );
+    },
     render() {
         var that = this;
-        var itemStyle = [defaultStyles.item, this.props.itemStyle];
         return (
             <View onLayout={that._getSliderWidth} style={[defaultStyles.container, this.props.containerStyle]}>
+                {this.props.labelPosition == 'top' ? this._labelView() : null}
                 <Slider ref="slider" {...this.props} style={this._sliderStyle()} onSlidingComplete={(value) => this._onSlidingCompleteCallback(value)} value={this.state.value} />
-                <View style={[defaultStyles.itemWrapper, this.props.itemWrapperStyle]}>
-                {
-                    this.props.items.map(function(i, j) {
-                        return <Text key={i.value} ref={"t"+j} style={itemStyle} onLayout={that._getItemWidth}>{i.label}</Text>;
-                    })
-                }
-                </View>
+                {this.props.labelPosition === undefined || this.props.labelPosition == 'bottom' ? this._labelView() : null}
             </View>
         );
     }
