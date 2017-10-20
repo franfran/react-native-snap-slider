@@ -49,6 +49,7 @@ var SnapSlider = React.createClass({
         return [defaultStyles.slider, {width: this.state.sliderWidth, left: this.state.sliderLeft}, this.props.style];
     },
     _onSlidingCompleteCallback: function (v) {
+        console.log("1111111111111111111", v);
         //pad the value to the snap position
         var halfRatio = this.state.sliderRatio / 2;
         var i = 0;
@@ -73,7 +74,7 @@ var SnapSlider = React.createClass({
         }
         this.setState({value: value, item: i}, () => 
             //callback
-            this.props.onSlidingComplete()
+            this.props.onSlidingComplete(i)
         );
 
     },
