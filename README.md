@@ -50,9 +50,10 @@ var snapslider = React.createClass({
             defaultItem: 2,
         };
     },
-    slidingComplete() {
+    slidingComplete(itemSelected) {
         console.log("slidingComplete");
         console.log("item selected " + this.refs.slider.state.item);
+        console.log("item selected(from callback)" + itemSelected);
         console.log("value " + this.sliderOptions[this.refs.slider.state.item].value);
     },
     render: function() {
@@ -65,6 +66,7 @@ var snapslider = React.createClass({
                     itemWrapperStyle={styles.snapsliderItemWrapper}
                     itemStyle={styles.snapsliderItem}
                     items={this.sliderOptions}
+                    labelPosition="bottom"
                     defaultItem={this.state.defaultItem}
                     onSlidingComplete={this.slidingComplete} />
             </View>
@@ -107,6 +109,7 @@ itemWrapperStyle      | [style](http://facebook.github.io/react-native/docs/view
 itemStyle            | [style](http://facebook.github.io/react-native/docs/view.html#style)    | Yes      |                           | Style for the individual item
 items    | Array    | No      |                           | Item list, in JSON Array [{value: 0, label: 'Item A'}...{}]
 defaultItem    | Number    | No      |                    | The default item in slider, first item is 0
+labelPosition    | String    | "bottom"      |                    | The label position, "bottom" or "top"
 
 ## Example
 
