@@ -2,24 +2,23 @@
 
 var React = require('react');
 var ReactNative = require('react-native');
-
-var {
-    PropTypes
-    } = React;
+var PropTypes = require('prop-types');
+var createReactClass = require('create-react-class');
 
 var {
     StyleSheet,
     Slider,
     Text,
     View,
+    ViewPropTypes
     } = ReactNative;
 
-var SnapSlider = React.createClass({
+var SnapSlider = createReactClass({
     propTypes: {
         onSlidingComplete: PropTypes.func,
-        style: View.propTypes.style,
-        containerStyle: View.propTypes.style,
-        itemWrapperStyle: View.propTypes.style,
+        style: ViewPropTypes.style,
+        containerStyle: ViewPropTypes.style,
+        itemWrapperStyle: ViewPropTypes.style,
         itemStyle: Text.propTypes.style,
         items: PropTypes.array.isRequired,
         defaultItem: PropTypes.number,

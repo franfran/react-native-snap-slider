@@ -18,5 +18,8 @@
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/franfran/react-native-snap-slider.git"
+  },
+  "devDependencies": {
+    "create-react-class": "^15.6.2"
   }
 }
