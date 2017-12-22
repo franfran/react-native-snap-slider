@@ -1,6 +1,6 @@
 {
   "name": "react-native-snap-slider",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Provide labels and snap control for Slider",
   "main": "SnapSlider.js",
   "author": "Francis Mak <francis@franfran.com> (https://github.com/franfran)",
